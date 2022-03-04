@@ -1,3 +1,24 @@
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://passx.cuodex.net">
+    <img src="https://passx.cuodex.net/assets/logo.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">PassX - Webinterface</h3>
+
+  <p align="center">
+    A safe place for your passwords!
+    <br />
+    <a href="https://passx.cuodex.net"><strong>Go to the Webinterface »</strong></a>
+    <br />
+    <br />
+    <a href="https://cuodex.net/passx">View Website</a>
+    ·
+    <a href="https://cuodex.net/contact#reportBug">Report Bug</a>
+  </p>
+</div>
+
 # PassX Mobile
 An mobile client for the PassX service by [CuodeX.net](https://cuodex.net)
 
@@ -16,3 +37,4 @@ An mobile client for the PassX service by [CuodeX.net](https://cuodex.net)
 ### Links
 - Webclient: https://github.com/CuodeX/PassX-Webclient
 - Hosted service: https://passx.cuodex.net
+- More project information: https://cuodex.net/passx
