@@ -8,7 +8,7 @@
   <h3 align="center">PassX - Mobile</h3>
 
   <p align="center">
-    A safe place for your passwords!
+    A safe place for your passwords on your smartphone!
     <br />
     <a href="https://passx.cuodex.net"><strong>Go to the Webinterface »</strong></a>
     <br />
