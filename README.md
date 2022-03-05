@@ -5,10 +5,10 @@
     <img src="https://passx.cuodex.net/assets/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">PassX - Webinterface</h3>
+  <h3 align="center">PassX - Mobile</h3>
 
   <p align="center">
-    A safe place for your passwords!
+    A safe place for your passwords on your smartphone!
     <br />
     <a href="https://passx.cuodex.net"><strong>Go to the Webinterface »</strong></a>
     <br />
