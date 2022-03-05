@@ -3,16 +3,21 @@
     
     <Gridlayout class="coverImage" rows="*" columns="*">
         <Stacklayout class="mainContainer">
-            <Label text="PassX" fontSize="24px" color="white" horizontalAlignment="center"/>
+            <label fontSize="24px" textWrap="true" horizontalAlignment="center" style="text-align: center;">
+                    <FormattedString>
+                        <Span text="Pass" color="white"/>
+                        <Span text="X" color="#10a889" fontWeight="bold"/>
+                    </FormattedString>
+            </label>
             <Label text="A safe place for all your passwords!" fontSize="16px" color="white" horizontalAlignment="center"/>
 
 
             <Stacklayout class="inputbox">
                 <Label text="Username" class="inputs label"/>
-                <TextField hint="Enter Username" placeholderColor="white" autocorrect="false" autocapitalizationType="none" class="inputs"/>
+                <TextField hint="Enter Username" placeholderColor="white" autocorrect="false" autocapitalizationType="none" class="inputFields"/>
 
                 <Label text="Password" class="inputs label password"/>
-                <TextField hint="Enter Password" placeholderColor="white" secure="true" autocorrect="false" autocapitalizationType="none" class="inputs"/>
+                <TextField hint="Enter Password" placeholderColor="white" secure="true" autocorrect="false" autocapitalizationType="none" class="inputFields"/>
                 <Label text="Create a new account" horizontalAlignment="right" paddingRight="15" fontSize="14" color="rgb(120, 120, 120)"/>
             </Stacklayout>
 
@@ -48,7 +53,7 @@
 }
 
 .inputs {
-    color: white;
+    color: lightgray;
     
     font-size: 14;
 
@@ -59,6 +64,12 @@
     &.label {
         padding-left: 15;
     }
+}
+
+.inputFields {
+    color: white;
+    placeholder-color: white;
+    font-size: 14;
 }
 
 .inputbox {
