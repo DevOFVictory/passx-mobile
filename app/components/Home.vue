@@ -21,7 +21,9 @@
                 <Label text="Create a new account" horizontalAlignment="right" paddingRight="15" fontSize="14" color="rgb(120, 120, 120)"/>
             </Stacklayout>
 
-            <Stacklayout marginTop="40" width="182">
+
+            <!-- Login Button -->
+            <Stacklayout marginTop="40" width="182" @tap="btnClick()">
                 <label class="loginButton line horizontal top" horizontalAlignment="left"/>
                 <StackLayout orientation="horizontal">
                     <label class="loginButton line vertical left"/>
@@ -38,8 +40,37 @@
 </template>
 
 <script>
+
+
   export default {
+
+    mounted() {
+        console.log('Hi');
+    },
+      
     computed: {
+    },
+    
+    methods: {
+        btnClick: function(args) {
+            
+            console.log('click');
+
+            fetch("https://api.cuodex.net/passx/v1.4/checkuser.php", {
+                method: "POST",
+                headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+              },
+                body: 'username=user&password=pass'
+            }).then((r) => r.json())
+                .then((response) => {
+                    const result = response.json;
+                    console.log(response);
+                }).catch((e) => {
+                });
+
+    }
+
     }
   };
 </script>

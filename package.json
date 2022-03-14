@@ -6,6 +6,8 @@
   "dependencies": {
     "@nativescript/core": "~8.1.1",
     "@nativescript/theme": "~3.0.1",
+    "axios": "^0.26.1",
+    "http": "^0.0.1-security",
     "nativescript-vue": "~2.9.0"
   },
   "devDependencies": {
