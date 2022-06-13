@@ -40,6 +40,7 @@
 </template>
 
 <script>
+    import { Http } from '@nativescript/core'
 
 
   export default {
@@ -54,20 +55,24 @@
     methods: {
         btnClick: function(args) {
             
-            console.log('click');
+            console.log('login');
 
-            fetch("https://api.cuodex.net/passx/v1.4/checkuser.php", {
-                method: "POST",
-                headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
-              },
-                body: 'username=user&password=pass'
-            }).then((r) => r.json())
-                .then((response) => {
-                    const result = response.json;
-                    console.log(response);
-                }).catch((e) => {
-                });
+            Http.request({
+            method: "POST",
+            url: 'http://api.cuodex.net:8080/passx/v2/auth/login',
+            content: JSON.stringify({
+                username: 'hello',
+                passwordTest: 'trello'
+            }),
+            headers: {"Content-Type": "application/json"},
+            timeout: 5000,
+        }).then(response => { // handle replay
+            const responseAsJson = response.content.toJSON();
+            console.log('dispatchAsync\n\tresponse:', responseAsJson);
+        }, reason => {
+            console.error(`[ERROR] httpModule, msg: ${reason.message}`);
+        });
+
 
     }
 
