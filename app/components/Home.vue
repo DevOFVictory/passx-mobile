@@ -14,10 +14,10 @@
 
             <Stacklayout class="inputbox">
                 <Label text="Username" class="inputs label"/>
-                <TextField hint="Enter Username" placeholderColor="white" autocorrect="false" autocapitalizationType="none" class="inputFields"/>
+                <TextField id="username-input" hint="Enter Username" placeholderColor="white" autocorrect="false" autocapitalizationType="none" class="inputFields"/>
 
                 <Label text="Password" class="inputs label password"/>
-                <TextField hint="Enter Password" placeholderColor="white" secure="true" autocorrect="false" autocapitalizationType="none" class="inputFields"/>
+                <TextField id="password-input" hint="Enter Password" placeholderColor="white" secure="true" autocorrect="false" autocapitalizationType="none" class="inputFields"/>
                 <Label text="Create a new account" horizontalAlignment="right" paddingRight="15" fontSize="14" color="rgb(120, 120, 120)"/>
             </Stacklayout>
 
@@ -41,7 +41,7 @@
 
 <script>
     import { Http } from '@nativescript/core'
-
+    var view = require("./Home.vue");
 
   export default {
 
@@ -61,8 +61,8 @@
             method: "POST",
             url: 'http://api.cuodex.net:8080/passx/v2/auth/login',
             content: JSON.stringify({
-                username: 'hello',
-                passwordTest: 'trello'
+                username: view.getViewById("username-input").text,
+                passwordTest: view.getViewById("password-input").text
             }),
             headers: {"Content-Type": "application/json"},
             timeout: 5000,
